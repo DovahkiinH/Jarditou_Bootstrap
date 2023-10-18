@@ -8,7 +8,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <title>Contact</title>
 
@@ -16,33 +20,47 @@
 
 <body>
 
-    <header>
+    <div class="container-fluid">
 
-        <div class="jarditou">
+        <div class=" d-flex justify-content-between">
 
-    <img class="logo" src="/assets/Img/jarditou_logo.jpg" alt="jarditou_logo">
+            <img src="/assets/Img/jarditou_logo.jpg" class="w-25 img-fluid" alt="jarditou_logo">
 
-    <p class="jardin"> Tout le jardin </p>
+            <p class="w-25 fs-1 fw-normal align-self-center ">Tout le jardin</p>
 
-        </div>
+    </div>
 
     </header>
 
-    <nav class="menu">
+    <nav class="navbar navbar-expand bg-light justify-content-between">
 
-        <ul>
+        <ul class="navbar-nav">
 
-           <li> <a href="index.html">Accueil</a> </li>
+            <li class="nav-item pt-sm-1"> <a class="navbar-brand" href="index.html">Jarditou.com</a> </li>
 
-           <li> <a href="tableau.html">Tableau</a> </li>
+           <li class="nav-item"> <a class="nav-link fw-bold" href="index.html">Accueil</a> </li>
 
-           <li> <a href="contact.html">Contact</a> </li>
+           <li class="nav-item"> <a class="nav-link" href="tableau.html">Tableau</a> </li>
+
+           <li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a> </li>
 
         </ul>
 
+        <form class="form-inline">
+
+            <div class="input-group">
+
+          <input class="form-control mr-sm-2" type="rechercher" placeholder="Votre promotion" aria-label="Rechercher">
+
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+
+            </div>
+
+        </form>
+
     </nav>
 
-      <img class="promo" src="/assets/Img/promotion.jpg" alt="promotion">
+      <img src="/assets/Img/promotion.jpg" alt="promotion" class="img-fluid w-100">
 
       <h1>Contact</h1>
 
@@ -144,23 +162,21 @@
 
     <footer>
 
-        <nav class="menu">
+        <nav class="navbar navbar-expand bg-light justify-content-between navbar-dark bg-dark">
 
-            <ul>
+            <ul class="navbar-nav">
         
-                <li> <a href="#">Mention légales</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Mention légales</a> </li>
         
-                <li> <a href="#">Horaires</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Horaires</a> </li>
         
-                <li> <a href="#">Plan du site</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Plan du site</a> </li>
         
             </ul>
         
         </nav>
         
     </footer>
-
-<script src="assets/JS/javascript.js"></script>
 
 </body>
 
