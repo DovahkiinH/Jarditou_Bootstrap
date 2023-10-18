@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <title>Contact</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="jarditou">
+
+    <img class="logo" src="/assets/Img/jarditou_logo.jpg" alt="jarditou_logo">
+
+    <p class="jardin"> Tout le jardin </p>
+
+        </div>
+
+    </header>
+
+    <nav class="menu">
+
+        <ul>
+
+           <li> <a href="index.html">Accueil</a> </li>
+
+           <li> <a href="tableau.html">Tableau</a> </li>
+
+           <li> <a href="contact.html">Contact</a> </li>
+
+        </ul>
+
+    </nav>
+
+      <img class="promo" src="/assets/Img/promotion.jpg" alt="promotion">
+
+      <h1>Contact</h1>
+
+      <section>
+
+      <form action="http://bienvu.net/script.php" method="post" id="formulaire_coordonnées">
+
+        <span for="uname">* Ces zones sont obligatoires </span>
+    
+        <br>
+        
+        <fieldset>
+    
+            <legend>Vos coordonnées</legend>
+    
+            <label for="nom">Votre nom*:</label><input type="text" name="nom" id="nom" required="required" maxlength="20">
+
+            <span id="nom_manquant"></span>
+            
+            <br>
+    
+            <label for="prénom">Votre prénom*:</label><input type="text" name="prénom" id="prénom" required="required">
+            
+            <br>
+    
+            <br>
+    
+            <label for="uname">Sexe : * </label>
+    
+            <input type="radio" name="Sexe*" value="Féminin"> Féminin 
+    
+            <input type="radio" name="Sexe*" value="Masculin"> Masculin
+    
+            <br>
+    
+            <br>
+    
+            <label for="date">Date de naissance*:</label><input type="date" name="date" id="date" required="required">
+    
+            <br>
+    
+            <label for="CodePostal">Code postal*:</label><input type="text" name="CodePostal" id="CodePostal" required="required">
+    
+            <br>
+    
+            <label for="Adresse">Adresse:</label><input type="text" name="Adresse" id="Adresse">
+    
+            <br>
+    
+            <label for="Ville">Ville:</label><input type="text" name="Ville" id="Ville">
+    
+            <br>
+    
+            <label for="email">Email*:</label><input type="email" name="email" id="email" placeholder="dave.loper@afpa.fr" required="required">
+    
+           </fieldset>
+    
+           <br>
+    
+           <fieldset>
+    
+            <legend>Votre demande</legend>
+    
+            <label for="sujet">Sujet*</label>
+    
+            <select id="sujet" required="required"> 
+        
+                <option value="Veuillez séléctionner un sujet" disabled selected>Veuillez séléctionner un sujet</option>
+        
+                <option value="Mes commandes">Mes commandes</option>
+        
+                <option value="Question sur un produit">Question sur un produit</option>
+        
+                <option value="Réclamation">Réclamation</option>
+    
+                <option value="Autres">Autres</option>
+    
+            </select>
+    
+            <br>
+    
+            <label for="uname">Votre question : * </label>
+    
+            <textarea name="Question" style="height: 40px;"> </textarea>
+    
+           </fieldset>
+    
+           <input type="checkbox" name="valider" value="valider" required="required"> <label for="uname"> * J'accepte le traitement informatique de ce formulaire </label>
+    
+           <br>
+    
+           <button type="submit" id="bouton_envoie">Envoyer</button>
+    
+           <button type="reset">Annuler</button>
+    
+        </form>
+
+      </section>
+
+    <footer>
+
+        <nav class="menu">
+
+            <ul>
+        
+                <li> <a href="#">Mention légales</a> </li>
+        
+                <li> <a href="#">Horaires</a> </li>
+        
+                <li> <a href="#">Plan du site</a> </li>
+        
+            </ul>
+        
+        </nav>
+        
+    </footer>
+
+<script src="assets/JS/javascript.js"></script>
+
+</body>
+
+</html>
