@@ -12,7 +12,6 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <title>Contact</title>
 
@@ -27,6 +26,8 @@
             <img src="/assets/Img/jarditou_logo.jpg" class="w-25 img-fluid" alt="jarditou_logo">
 
             <p class="w-25 fs-1 fw-normal align-self-center ">Tout le jardin</p>
+
+        </div>
 
     </div>
 
@@ -62,59 +63,63 @@
 
       <img src="/assets/Img/promotion.jpg" alt="promotion" class="img-fluid w-100">
 
-      <h1>Contact</h1>
+      <span for="uname" class="fw-light">* Ces zones sont obligatoires </span>
+
+      <br>
+
+      <h1>Vos coordonnées</h1>
 
       <section>
 
-      <form action="http://bienvu.net/script.php" method="post" id="formulaire_coordonnées">
-
-        <span for="uname">* Ces zones sont obligatoires </span>
+      <form action="http://bienvu.net/script.php" method="post" id="formulaire_coordonnées" class="form-inline">
     
         <br>
         
         <fieldset>
     
-            <legend>Vos coordonnées</legend>
-    
-            <label for="nom">Votre nom*:</label><input type="text" name="nom" id="nom" required="required" maxlength="20">
+            <label for="nom">Nom*:</label><input type="text" name="nom" id="nom" required="required" maxlength="20" placeholder="Veuillez saisir votre nom" class="form-control mr-sm-2 mt-2">
 
-            <span id="nom_manquant"></span>
+            <span id="nom_erreur"></span>
             
             <br>
     
-            <label for="prénom">Votre prénom*:</label><input type="text" name="prénom" id="prénom" required="required">
-            
+            <label for="prénom">Votre prénom*:</label><input type="text" name="prénom" id="prénom" required="required" placeholder="Veuillez saisir votre prénom" class="form-control mr-sm-2 mt-2">
+
+            <span id="prenom_erreur"></span>
+    
+            <label for="uname" class="mt-4">Sexe : * </label>
+
             <br>
     
-            <br>
+            <input type="radio" name="Sexe*" value="Féminin" class="mt-4"> Féminin 
     
-            <label for="uname">Sexe : * </label>
-    
-            <input type="radio" name="Sexe*" value="Féminin"> Féminin 
-    
-            <input type="radio" name="Sexe*" value="Masculin"> Masculin
-    
-            <br>
-    
-            <br>
-    
-            <label for="date">Date de naissance*:</label><input type="date" name="date" id="date" required="required">
+            <input type="radio" name="Sexe*" value="Masculin" class="mt-4"> Masculin
     
             <br>
     
-            <label for="CodePostal">Code postal*:</label><input type="text" name="CodePostal" id="CodePostal" required="required">
+            <label for="date" class="mt-4">Date de naissance*:</label><input type="date" name="date" id="date" required="required" class="form-control mr-sm-2 mt-2 mt-2">
     
             <br>
     
-            <label for="Adresse">Adresse:</label><input type="text" name="Adresse" id="Adresse">
+            <label for="CodePostal">Code postal*:</label><input type="text" name="CodePostal" id="CodePostal" required="required" class="form-control mr-sm-2 mt-2">
+
+            <span id="CP_erreur"></span>
     
             <br>
     
-            <label for="Ville">Ville:</label><input type="text" name="Ville" id="Ville">
+            <label for="Adresse">Adresse:</label><input type="text" name="Adresse" id="Adresse" class="form-control mr-sm-2 mt-2">
     
             <br>
     
-            <label for="email">Email*:</label><input type="email" name="email" id="email" placeholder="dave.loper@afpa.fr" required="required">
+            <label for="Ville">Ville:</label><input type="text" name="Ville" id="Ville" class="form-control mr-sm-2 mt-2">
+
+            <span id="ville_erreur"></span>
+    
+            <br>
+    
+            <label for="email">Email*:</label><input type="email" name="email" id="email" placeholder="dave.loper@afpa.fr" required="required" class="form-control mr-sm-2 mt-2">
+
+            <span id="email_erreur"></span>
     
            </fieldset>
     
@@ -124,9 +129,9 @@
     
             <legend>Votre demande</legend>
     
-            <label for="sujet">Sujet*</label>
+            <label for="sujet">Sujet</label>
     
-            <select id="sujet" required="required"> 
+            <select id="sujet" required="required" class="form-control mr-sm-2 mt-2"> 
         
                 <option value="Veuillez séléctionner un sujet" disabled selected>Veuillez séléctionner un sujet</option>
         
@@ -139,26 +144,33 @@
                 <option value="Autres">Autres</option>
     
             </select>
+
+            <span id="sujet_erreur"></span>
     
             <br>
     
             <label for="uname">Votre question : * </label>
     
-            <textarea name="Question" style="height: 40px;"> </textarea>
+            <textarea name="Question" style="height: 40px;" required class="form-control mr-sm-2 mt-2"> </textarea>
     
            </fieldset>
     
-           <input type="checkbox" name="valider" value="valider" required="required"> <label for="uname"> * J'accepte le traitement informatique de ce formulaire </label>
-    
+           <input type="checkbox" name="valider" value="valider" required="required" class="mt-4"> <label for="uname"> * J'accepte le traitement informatique de ce formulaire </label>
+
            <br>
     
-           <button type="submit" id="bouton_envoie">Envoyer</button>
+           <span id="valider_erreur"></span>
+
+           <br>
     
-           <button type="reset">Annuler</button>
+           <button type="submit" id="bouton_envoie" class="btn btn-dark mb-4">Envoyer</button>
+    
+           <button type="reset" class="btn btn-dark mb-4">Annuler</button>
     
         </form>
 
       </section>
+
 
     <footer>
 
@@ -177,6 +189,14 @@
         </nav>
         
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+
+    </script>
+
+    <script src="/assets/JS/javascript.js">
+
+    </script>
 
 </body>
 
