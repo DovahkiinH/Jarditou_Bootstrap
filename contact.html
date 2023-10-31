@@ -79,7 +79,7 @@
     
             <label for="nom">Nom*:</label><input type="text" name="nom" id="nom" required="required" maxlength="20" placeholder="Veuillez saisir votre nom" class="form-control mr-sm-2 mt-2">
 
-            <span id="nom_erreur"></span>
+            <div class="alert alert-danger mt-2" id="nom_obligatoire"> Veuillez mettre uniquement des lettres dans ce champ.</div>
             
             <br>
     
@@ -163,7 +163,7 @@
 
            <br>
     
-           <button type="submit" id="bouton_envoie" class="btn btn-dark mb-4">Envoyer</button>
+           <button type="submit" id="bouton_envoie" name="valider" class="btn btn-dark mb-4">Envoyer</button>
     
            <button type="reset" class="btn btn-dark mb-4">Annuler</button>
     
@@ -190,13 +190,11 @@
         
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    </script>
-
-    <script src="/assets/JS/javascript.js">
-
-    </script>
+    <script src="/assets/JS/jquery.js"></script>
 
 </body>
 
